@@ -1,0 +1,44 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{setspace}
+\setstretch{1.5}
+
+\title{Análise de Similaridade entre Textos com TF-IDF}
+\author{Arthur Davino Rizzo}
+\date{FATEC São Vicente - 2025}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+Este trabalho tem como objetivo aplicar conceitos de Álgebra Linear e Ciência de Dados por meio da técnica TF-IDF (\textit{Term Frequency-Inverse Document Frequency}) para medir a similaridade entre textos. O método é amplamente utilizado em mineração de texto, recuperação de informação e processamento de linguagem natural.
+
+\section{Descrição do Conjunto de Dados}
+O conjunto de dados consiste em 20 textos curtos, sendo 10 relacionados ao tema ``Futebol'' e 10 relacionados ao tema ``Tecnologia no Esporte''. O objetivo é verificar, por meio da análise vetorial, quais textos apresentam maior semelhança em termos de conteúdo e vocabulário.
+
+\section{Metodologia}
+A abordagem segue os seguintes passos principais:
+\begin{enumerate}
+    \item Vetorização dos textos com TF-IDF, transformando cada documento em um vetor numérico.
+    \item Cálculo da similaridade de cosseno entre os vetores, permitindo medir a proximidade semântica.
+    \item Conversão da similaridade em ângulos, de forma que ângulos menores indiquem textos mais semelhantes.
+\end{enumerate}
+
+\section{Resultados}
+A matriz de similaridade e a matriz de ângulos foram obtidas a partir dos 20 textos. Cada elemento da matriz representa o grau de semelhança entre dois textos.
+
+Os resultados mostraram que os textos sobre o mesmo tema tendem a ter alta similaridade entre si. Em especial, textos que mencionam ``análise de desempenho'' e ``big data'' apresentaram forte correlação, indicando relação temática direta.
+
+\section{Conclusão}
+O experimento demonstrou que o TF-IDF é uma ferramenta eficaz para mensurar semelhanças textuais e que o conceito de ângulo entre vetores, originário da Álgebra Linear, pode ser aplicado na interpretação de dados textuais. O método permite identificar relações semânticas e padrões de conteúdo de maneira quantitativa e objetiva.
+
+\section{Código Fonte}
+O código Python completo encontra-se no arquivo \texttt{tfidf\_text\_similarity.py}, que acompanha este relatório.
+
+\end{document}
